@@ -580,7 +580,6 @@ p span img {
     display: block; 
   }
 
-  
 
   .nav-links {
     position: absolute;
@@ -625,6 +624,7 @@ p span img {
     padding: 40px 8%;
   }
 
+  
   .image img {
     width: 300px;
     margin-top: 20px;
@@ -657,6 +657,22 @@ p span img {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+.form-row {
+  width: 90%;
+}
+  .contact-form input {
+    width: 90%;
+  }
+
+  .contact-form textarea {
+    width: 90%;
+    
+  }
+
+  .contact-form button {
+    width: 90%;
+  }
 
 .section {
   width: 100%;

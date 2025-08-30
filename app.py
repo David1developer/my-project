@@ -4,15 +4,15 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 app = Flask(__name__)
-app.secret_key = "your_secret_key"  # Needed for flash messages
+app.secret_key = "your_secret_key"
 
-# Your Gmail details
-EMAIL_ADDRESS = "crownjude33@gmail.com"   # your Gmail
-EMAIL_PASSWORD = "whqqwtivhruuruqw"  # the 16-digit app password
+
+EMAIL_ADDRESS = "crownjude33@gmail.com"  
+EMAIL_PASSWORD = "whqqwtivhruuruqw" 
 
 @app.route("/")
 def home():
-    return render_template("index.html")  # Your website’s HTML file
+    return render_template("index.html")  
 
 @app.route("/send_message", methods=["POST"])
 def send_message():
@@ -65,10 +65,10 @@ def send_message():
             
             server.send_message(auto_reply)
 
-        flash("✅ Your message has been sent, and an auto-reply was delivered!")
+        flash("✅ Your message has been sent, and an auto-reply was delivered!", "success" )
     except Exception as e:
-        print("❌ Error:", e)
-        flash("⚠️ Something went wrong. Please try again later.")
+        print("❌ Error:", e )
+        flash("⚠️ Something went wrong. Please try again later.", 'info')
 
     return redirect(url_for("home") + "#contact")
 
